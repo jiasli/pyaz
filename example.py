@@ -13,10 +13,10 @@ def main():
     # exit code 0: succeed
     az_demo("account list-locations --query \"[?name=='westus'] | [0]\"")
 
-    # exit code 1: request failure
+    # exit code 1: request error
     az_demo("group create -l eastus4 -n foo")
 
-    # exit code 2: command parsing failure
+    # exit code 2: command parsing error
     az_demo("group not-exist")
 
     # exit code 3: resource doesn't exist
